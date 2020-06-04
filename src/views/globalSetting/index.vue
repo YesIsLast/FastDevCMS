@@ -22,7 +22,12 @@
         <h3>版本号配置</h3>
         <a-input placeholder="请输入版本号配置" v-model="form.version"></a-input>
       </a-col>
-      
+
+      <a-col :span="2" class="menuLeft wos-padding-T-10">聊天设置</a-col>
+      <a-col :span="22" class="menuRight wos-padding-T-10">
+        <h3>聊天过滤词配置</h3>
+        <tagDynamic ref="tagDynamicRef" btnText="添加过滤词" :propList="form.chatFilter" @returnFun="(val)=>{form.chatFilter = val}"></tagDynamic>
+      </a-col>
     </a-row>
 
     <!-- 底部按钮 -->

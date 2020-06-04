@@ -1,5 +1,5 @@
 {
-  "title": "快速开发后台管理系统",
+  "title": "快开CMS",
   "baseURL": "http://localhost:9002/api/",
   "version": "1.0.0",
   "timeout": 30000,

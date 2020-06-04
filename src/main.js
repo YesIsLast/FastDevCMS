@@ -4,9 +4,8 @@ import router from './router'
 import store from './store'
 
 //全局加载ant，优化点：按需加载减少体积
-// import Antd from 'ant-design-vue'
-import Antd from './assets/plugin/ant-desgin-vue 1.5.0rc3'
-import './assets/plugin/ant-desgin-vue 1.5.0rc3/dist/antd.css'
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css';
 Vue.use(Antd)
 
 //全局引入基础样式库

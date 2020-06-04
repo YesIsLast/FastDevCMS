@@ -1,13 +1,13 @@
 import router from '@/router'
 export default ( modules ) => {
     let serverRoute = [{
-        path: '/home/index',
+        path: '/home',
         name: 'home',
         component: () => import('../views/home/index.vue')
     },
     {
-      path: '/globalSetting/index',
-      name: '全局设置',
+      path: '/globalSetting',
+      name: 'globalSetting',
       component: () => import('../views/globalSetting/index.vue')
     }]
     for (let i in modules){
@@ -31,8 +31,9 @@ export default ( modules ) => {
         //     })
         // }
     }
+    // 根路由名称更改为layout防止home同名歧义
     let routerArray = {
-        path: '/home',
+        path: '/layout',
         component: () => import('../views/Home.vue'),
         children:serverRoute
     }
