@@ -1,0 +1,119 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+th,
+td,
+menu,
+nav {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    overflow-x: hidden;
+    font-family: Microsoft YaHei, Simsun, serif;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+em {
+    font-style: normal;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+/*//禁用了文本的拖拉，尤其在谷歌下*/
+p {
+    text-align: justify;
+    text-justify: distribute;
+}
+
+/*//为了使文本段落左右两边对齐*/
+a {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #f9fdff inset !important;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+// ant design 框架默认样式修改部分CSS
+
+// 表单校验提示语默认样式修改
+.ant-form-inline .ant-form-item-with-help {
+    margin-bottom: 0px !important;
+}
+
+.ant-form-inline .ant-form-item {
+    margin: 0 !important;
+}

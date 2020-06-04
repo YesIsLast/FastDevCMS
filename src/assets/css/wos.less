@@ -1,0 +1,100 @@
+@import './rule.less';
+.wos-flex{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+.wos-flex-center{
+  justify-content: center;
+  align-items: center
+}
+.wos-between{
+  justify-content: space-between;
+}
+.wos-flex-auto{
+  flex:1;
+}
+.wos-padding-md{
+  padding: @padding-md;
+}
+.wos-col-center{
+  align-items: center
+}
+//Standard interval
+.wos-si{
+  height: @si;
+  width: 100%;
+}
+.wos-si-x2{
+  height: @si*2;
+  width: 100%;
+}
+
+.wos-align-right{
+  text-align: right;
+}
+.wos-align-left{
+  text-align: left;
+}
+.wos-align-center{
+  text-align: center;
+}
+.wos-font-lg{
+  font-size: 1.2rem;
+}
+.wos-hand{
+  cursor: pointer;
+}
+
+
+.wos-searchBar{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  div{
+    padding: 0 5px;
+  }
+  .searchInput{
+    width: 200px;
+  }
+}
+.wos-table{
+
+}
+
+.wos-button{
+  margin: 0px 3px;
+}
+// 表单lable输入字段
+.wos-lable-default{
+  line-height: 32px;
+}
+// 表单必填项时使用样式
+.wos-lable-required:before{
+  margin-right: 4px;
+  color: #f5222d;
+  font-size: 14px;
+  font-family: SimSun,sans-serif;
+  line-height: 1;
+  content: "*";
+}
+
+.wos-lable-large{
+  line-height: 40px;
+}
+.wos-lable-small{
+  line-height: 24px;
+}
+// 修改row行默认padding样式
+.wos-row-padding-default{
+  padding: 10px 10px 0px 10px;
+}
+// 表单宽度占满
+.wos-width-100{
+  width: 100%;
+}
+.wos-page{
+
+}
+.wos-height-100vh{
+  min-height: 100vh;
+}

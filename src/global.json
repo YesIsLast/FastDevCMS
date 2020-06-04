@@ -1,0 +1,6 @@
+{
+  "title": "快速开发后台管理系统",
+  "baseURL": "http://localhost:9002/api/",
+  "timeout": 30000,
+  "domain": "FastDevCMS.com"
+}
