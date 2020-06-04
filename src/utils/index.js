@@ -8,6 +8,51 @@ function throwIfMissing() {
 	throw new Error('必须的参数并没有被传递');
 }
 
+// 复制内容至剪切板
+function toClipboard() {
+    // 获取需要复制得页面节点
+    const copySpan = document.getElementById('copy');
+    const range = document.createRange();
+    // 获取节点text内容
+    range.selectNodeContents(copySpan);
+    const selection = window.getSelection();
+    selection.removeAllRanges();//（注意）
+    selection.addRange(range);
+
+    const copyContent = document.execCommand('Copy',false,null);
+    selection.removeRange(range);
+
+    if (copyContent) {
+        store.commit('SET_MESSAGE',{
+            "message" : "复制成功",
+            "level" : "success"
+        })
+    }else{
+        store.commit('SET_MESSAGE',{
+            "message" : "复制失败",
+            "level" : "error"
+        })
+    }
+  }
+
+/**
+ * 首字母大小写转换
+ * @param {*} str 字符串值
+ * @param {*} type 转换类型 小写——lowercase/大写——upperCase
+ * @returns 大小写转换后得单词
+ */
+function getWordFormat(str,type){
+    let result = ""
+    if(type == 'lowercase'){
+        // 小写转换
+        result = str.toLowerCase()
+    }else if(type == 'upperCase'){
+        // 大写转换
+        result = str.toUpperCase()
+    }
+    return result
+}
+
 /**
  * 数组 转 字符串  数组逗号分割
  * @param {*} arr 数组格式 ["妈蛋","滚","啥也不是","？？？"]
@@ -145,5 +190,7 @@ export default {
 	parsingJSON,
 	changeFormatTime,
 	getSplit,
-	setSplit
+	setSplit,
+    getWordFormat,
+    toClipboard
 }

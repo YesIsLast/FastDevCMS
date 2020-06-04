@@ -95,7 +95,7 @@ export default {
         .login(this.form)
         .then(res => {
           res === true
-            ? this.$router.push({ path: "/home/index" })
+            ? this.$router.push({ path: "/home" })
             : this.$message.warning(res.type)
         })
         .catch(err => {

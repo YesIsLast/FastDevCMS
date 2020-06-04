@@ -89,11 +89,6 @@ export default {
     }
   },
   methods: {
-    go(url){
-      if(url){
-        this.$router.push({ path: url })
-      }
-    },
     selectMenu(m) {
       this.$store.commit("SET_STATE",{"key":"setDefaultSelectedKey",value: m.key})
       this.defaultSelectedKeys = [m.key]

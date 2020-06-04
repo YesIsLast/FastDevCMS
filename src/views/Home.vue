@@ -282,7 +282,7 @@
 </template>
 
 <script>
-import menuList from "../components/MenuListTest/MenuList";
+import menuList from "../components/menuList/menuList";
 import { mapState } from "vuex";
 
 export default {
