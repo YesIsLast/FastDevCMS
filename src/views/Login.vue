@@ -66,7 +66,7 @@
         <a href="#">{{ $lang.login[5] }}</a>
       </div>
 
-      <div class="copyright">COPYRIGHT &copy; {{ $lang.domain }}.COM Version:{{version}}</div>
+      <div class="copyright">COPYRIGHT &copy; {{ $lang.domain }}.COM Version:{{ $lang.version }}</div>
     </div>
   </div>
 </template>

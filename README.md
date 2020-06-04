@@ -1,5 +1,7 @@
 # FastDevCMS 快速开发后台管理系统(脚手架)
 
+开发团队（我们俩）
+
 是一套基于[vue](https://github.com/vuejs/vue)和[antd](https://www.antdv.com/docs/vue/introduce-cn/)的一套中前端平台
 
 仍在开发阶段

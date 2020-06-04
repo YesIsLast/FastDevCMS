@@ -44,6 +44,10 @@ Vue.mixin( globalMixins )
 import utils from './utils'
 Vue.prototype.$utils = utils
 
+//全局表单公共校验准则
+import validator from './common/validator'
+Vue.prototype.$validator = validator;
+
 
 Vue.config.productionTip = false
 

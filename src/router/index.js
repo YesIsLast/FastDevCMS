@@ -28,7 +28,7 @@ const routes = [
     component: Login
   },
   {
-    path: "/error/404.vue",
+    path: "/error/404",
     name: "页面无法访问",
     component: Page404
   }
@@ -58,11 +58,13 @@ router.beforeEach((to, from, next) => {
     to.path !== '/login' &&
     to.path !== '/' &&
     to.path !== '/home/index' &&
-    to.path !== '/globalSetting/index' &&
+    to.path !== '/globalSetting' &&
     store.state.SETMODULES[to.path] === undefined
   ) {
     next('/error/404.vue');
   }
+  // 解决菜单路由联动
+  // resolveMenuRoute(to.path)
 
   next() // 必须执行
 })
@@ -108,6 +110,20 @@ function getBreadcrumb(key) {
   }
 
   return result.concat(children)
+}
+
+// 处理菜单与路由联动
+function resolveMenuRoute(path){
+  if(!['/',undefined,"/login","/globalSetting/index","/error/404.vue"].includes(path) && store.state.SETMODULES[path] != undefined){
+    console.log("存储store")
+    // 联动菜单点击效果
+    let routerMenu = store.state.SETMODULES[path] // 当前路由配置
+    // 联动菜单组件执行打开与选中菜单功能
+    let routerMenuParent = routerMenu.parentPath != ""?store.state.SETMODULES[routerMenu.parentPath]:"" // 当前路由父级配置
+    // 存储菜单组件KEY
+    store.commit("SET_STATE",{"key":"setDefaultSelectedKey",value: routerMenu.id})
+    routerMenu.parentPath?store.commit("SET_STATE",{"key":"setDefaultOpenKey",value: [routerMenuParent.id]}):""
+  }
 }
 
 export default router

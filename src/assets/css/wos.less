@@ -7,12 +7,33 @@
   justify-content: center;
   align-items: center
 }
+// 垂直居中
+.wos-flex-align-items-center{
+  align-items: center
+}
+.wos-flex-start{
+  justify-content: flex-start;
+}
+.wos-flex-end{
+  justify-content: flex-end;
+}
 .wos-between{
   justify-content: space-between;
 }
 .wos-flex-auto{
   flex:1;
 }
+.wos-flex-wrap{
+  flex-wrap: wrap
+}
+.wos-flex-order_1{
+  order: 1;
+}
+.wos-flex-order_-1{
+  order: -1;
+}
+
+
 .wos-padding-md{
   padding: @padding-md;
 }
@@ -92,9 +113,244 @@
 .wos-width-100{
   width: 100%;
 }
+.wos-width-35{
+  width: 35%;
+}
+.wos-width-200px{
+  width: 200px;
+}
+.wos-width-100-slideBar{
+  width: 100%;
+  height: 300px;
+}
+.wos-min-width-168{
+  min-width: 168px;
+}
 .wos-page{
 
 }
 .wos-height-100vh{
   min-height: 100vh;
+}
+
+/* // 字体样式 */
+.wos-font-large-xx {
+  font-size: 1.7rem;
+}
+.wos-font-large-x {
+  font-size: 1.4rem;
+}
+.wos-font-large {
+  font-size: 1.1rem;
+}
+.wos-font-md-xx {
+  font-size: 0.8rem;
+}
+.wos-font-md-x {
+  font-size: 0.6rem;
+}
+.wos-font-md {
+  font-size: 0.4rem;
+}
+.wos-font-sm {
+  font-size: 0.2rem;
+}
+.wos-font-weight-500 {
+  font-weight: 500;
+}
+.wos-font-weight-700 {
+  font-weight: 700;
+}
+/* // 边距样式 */
+.wos-line-height-50{
+  line-height: 50px;
+}
+.wos-margin-B-5{
+  margin-bottom: 5px;
+}
+.wos-margin-B-10 {
+  margin-bottom: 10px;
+}
+.wos-margin-B-20 {
+  margin-bottom: 20px;
+}
+.wos-margin-B-30 {
+  margin-bottom: 30px;
+}
+.wos-img-mini {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 3px;
+}
+.wos-img-sm {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  margin: 3px;
+}
+.wos-img-sm-noradius {
+  width: 50px;
+  height: 50px;
+}
+.wos-img-md {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
+.wos-img-md-noradius {
+  width: 100px;
+  height: 100px;
+}
+.wos-img-lg-noradius {
+  width: 240px;
+  height: 240px;
+}
+
+/* 图片附带介绍使用 */
+.wos-img-Csm {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+}
+.wos-float-right {
+  float: right;
+}
+.wos-float-left{
+  float: left;
+}
+.wos-padding-TB-10 {
+  padding: 10px 0px;
+}
+.wos-padding-TB-20 {
+  padding: 20px 0px;
+}
+.wos-padding-LR-5 {
+  padding: 0px 5px;
+}
+.wos-padding-LR-10 {
+  padding: 0px 10px;
+}
+.wos-padding-LR-20 {
+  padding: 0px 20px;
+}
+.wos-padding-L-10 {
+  padding-left: 10px;
+}
+.wos-padding-L-20 {
+  padding-left: 20px;
+}
+.wos-padding-L-30 {
+  padding-left: 30px;
+}
+.wos-padding-L-40 {
+  padding-left: 40px;
+}
+.wos-padding-T-10 {
+  padding-top: 10px;
+}
+.wos-padding-T-20 {
+  padding-top: 20px;
+}
+.wos-padding-R-5 {
+  padding-right: 5px;
+}
+.wos-padding-R-10 {
+  padding-right: 10px;
+}
+.wos-padding-R-20 {
+  padding-right: 20px;
+}
+.wos-padding-B-5 {
+  padding-bottom: 5px;
+}
+.wos-padding-B-20 {
+  padding-bottom: 20px;
+}
+.wos-padding-B-30 {
+  padding-bottom: 30px;
+}
+.wos-padding-B-50 {
+  padding-bottom: 50px;
+}
+.wos-color-a-gray {
+  // color: #d7d7df;
+  color: #979797;
+}
+.wos-color-gray{
+  color: @gray;
+}
+.wos-color-DarkGray{
+  color: @darkgray;
+}
+.wos-color-black {
+  color: rgba(0, 0, 0, 0.45);
+}
+.wos-color-blue {
+  color: @blue;
+}
+.wos-color-red {
+  color: @red;
+}
+.wos-button-green {
+  background-color: #70b603 !important;
+  border-color: #70b603 !important;
+}
+.wos-button-green:hover {
+  background-color: rgb(176, 204, 132) !important;
+  border-color: rgb(176, 204, 132) !important;
+}
+.wos-button-black {
+  background-color: black !important;
+  border-color: black !important;
+}
+.wos-button-black:hover {
+  background-color: rgb(70, 69, 69) !important;
+  border-color: rgb(70, 69, 69) !important;
+}
+.wos-button-cyan {
+  color: black;
+  background-color: #80ffff !important;
+  border-color: #80ffff !important;
+}
+.wos-button-cyan:hover {
+  color: rgb(56, 56, 56);
+  background-color: rgb(180, 247, 247) !important;
+  border-color: rgb(180, 247, 247) !important;
+}
+.wos-button-gold {
+  color: #ffffff !important;
+  background-color: #c29e52 !important;
+  border-color: #c29e52 !important;
+}
+.wos-button-gold:hover {
+  color: #ffffff !important;
+  background-color: #c29e52 !important;
+  border-color: #c29e52 !important;
+}
+.wos-margin-B-30 {
+  margin-bottom: 30px;
+}
+.wos-margin-B-20 {
+  margin-bottom: 20px;
+}
+.wos-margin-B-10 {
+  margin-bottom: 10px;
+}
+.wos-margin-TB-10{
+  margin: 10px 0px;
+}
+.wos-border-1{
+  border: solid 1px @gray;
+}
+.wos-divider{
+  background-color: @gray;
+  height: 70%;
+  width: 1px;
+  position: relative;
+  top: 15%;
+}
+.wos-search-title{
+  line-height: 32px;
+  padding: 0px 10px;
 }
